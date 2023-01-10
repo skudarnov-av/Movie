@@ -1,15 +1,15 @@
 package ru.netology;
 
-public class manager {
+public class Manager {
     private String[] moveList = new String[0];
 
     private int maxMovies;
 
-    public manager() {
+    public Manager() {
         maxMovies = 10;
     }
 
-    public manager(int maxMovies) {
+    public Manager(int maxMovies) {
         this.maxMovies = maxMovies;
     }
 
@@ -45,7 +45,7 @@ public class manager {
         return moveList;
     }
 
-    public void findLast() {
+    public String[] findLast() {
         int resultLength;
         if (moveList.length > maxMovies) {
             resultLength = maxMovies;
@@ -58,11 +58,9 @@ public class manager {
 
         for (int i = 0; i < resultLength; i++) {
             tmp[i] = moveList[lastIndex - i];
-
         }
-        moveList = tmp;
-
-
+        return tmp;
     }
+
 
 }
